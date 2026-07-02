@@ -3,6 +3,11 @@
  * (jonbarron.info 等、CV分野で定番のプレーンな1カラム構成)
  * ========================================================== */
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 64px;
+}
+
 body {
   margin: 0;
   /* 真っ白ではなく、目にやさしいごく薄いブルーグレー */
@@ -65,12 +70,59 @@ h3 {
   margin: 24px 0 12px;
 }
 
-/* ---------- 言語切り替え ---------- */
-.lang-row {
-  text-align: right;
-  margin: 0 0 8px;
+/* ---------- ナビゲーション ---------- */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #f5f7f9;
+  border-bottom: 1px solid #e1e7ec;
+}
+
+.site-nav-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-name {
+  color: #24292f;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.nav-name:hover { color: #1772d0; }
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
   font-size: 14px;
 }
+
+.nav-links a {
+  color: #57606a;
+  white-space: nowrap;
+}
+.nav-links a:hover { color: #1772d0; }
+
+.lang-switch {
+  margin: 0 0 0 auto;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.lang-switch a { color: #57606a; }
+.lang-switch a.active {
+  color: #24292f;
+  font-weight: bold;
+}
+.lang-sep { color: #b6bec6; margin: 0 6px; }
 
 /* ---------- イントロ ---------- */
 .intro {
@@ -180,15 +232,32 @@ h3 {
 }
 
 /* ---------- フッター ---------- */
-.footer {
-  margin-top: 64px;
+.site-footer {
+  margin-top: 72px;
+  background: #3f464e;
+  color: #aab3bb;
   text-align: center;
-  color: #909090;
-  font-size: 13px;
+  padding: 34px 20px 30px;
+}
+
+.footer-name {
+  margin: 0 0 4px;
+  color: #e8ebee;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 12.5px;
 }
 
 /* ---------- レスポンシブ ---------- */
 @media (max-width: 640px) {
+  .site-nav-inner { padding: 0 18px; gap: 16px; }
+  .nav-name { display: none; }
+  .nav-links { gap: 16px; }
+
   .top-banner { height: 150px; }
   .page { margin-top: -80px; padding: 12px 22px 50px; }
 

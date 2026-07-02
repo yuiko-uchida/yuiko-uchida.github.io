@@ -3,6 +3,12 @@
   "use strict";
 
   const UI_TEXT = {
+    navNews: { ja: "ニュース", en: "News" },
+    navPublications: { ja: "研究業績", en: "Publications" },
+    navAwards: { ja: "受賞", en: "Awards" },
+    navEducation: { ja: "学歴", en: "Education" },
+    navExperience: { ja: "職歴", en: "Experience" },
+    navSkills: { ja: "スキル", en: "Skills" },
     headNews: { ja: "ニュース", en: "News" },
     headPublications: { ja: "研究業績", en: "Publications" },
     headIntl: { ja: "国際学会（査読あり・主著）", en: "International Conferences (Refereed, First Author)" },
@@ -12,7 +18,6 @@
     headExperience: { ja: "職歴", en: "Experience" },
     headSkills: { ja: "スキル", en: "Skills" },
     keywords: { ja: "キーワード: ", en: "Keywords: " },
-    switchTo: { ja: "English", en: "日本語" },
   };
 
   // URLパラメータ (?lang=en) → 保存された言語 → ブラウザ言語 の順で初期言語を決定
@@ -180,10 +185,12 @@
     toggleSection("skills", (DATA.skills || []).length > 0);
   }
 
-  // データが空のセクションは丸ごと非表示にする
+  // データが空のセクションは丸ごと非表示にする（ナビのタブも連動）
   function toggleSection(id, visible) {
     const section = document.getElementById(id);
     if (section) section.style.display = visible ? "" : "none";
+    const navLink = document.querySelector('.nav-links a[href="#' + id + '"]');
+    if (navLink) navLink.parentElement.style.display = visible ? "" : "none";
   }
 
   function renderAll() {
@@ -191,7 +198,12 @@
       node.textContent = t(UI_TEXT[node.dataset.i18n]);
     });
     document.documentElement.lang = lang;
-    document.getElementById("lang-toggle").textContent = t(UI_TEXT.switchTo);
+    document.querySelectorAll("[data-lang-set]").forEach((node) => {
+      node.classList.toggle("active", node.dataset.langSet === lang);
+    });
+    document.getElementById("nav-name").textContent = t(DATA.profile.name);
+    document.getElementById("footer-name").textContent =
+      t(DATA.profile.name) + " · " + t(DATA.profile.nameSub);
     document.getElementById("footer-text").textContent =
       "© " + new Date().getFullYear() + " " + t(DATA.profile.name);
 
@@ -205,11 +217,13 @@
     renderSkills();
   }
 
-  document.getElementById("lang-toggle").addEventListener("click", (e) => {
-    e.preventDefault();
-    lang = lang === "ja" ? "en" : "ja";
-    localStorage.setItem("lang", lang);
-    renderAll();
+  document.querySelectorAll("[data-lang-set]").forEach((node) => {
+    node.addEventListener("click", (e) => {
+      e.preventDefault();
+      lang = node.dataset.langSet;
+      localStorage.setItem("lang", lang);
+      renderAll();
+    });
   });
 
   renderAll();

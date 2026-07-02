@@ -10,15 +10,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="top">
+
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a href="#top" id="nav-name" class="nav-name"></a>
+      <ul class="nav-links">
+        <li><a href="#news" data-i18n="navNews"></a></li>
+        <li><a href="#publications" data-i18n="navPublications"></a></li>
+        <li><a href="#awards" data-i18n="navAwards"></a></li>
+        <li><a href="#education" data-i18n="navEducation"></a></li>
+        <li><a href="#experience" data-i18n="navExperience"></a></li>
+        <li><a href="#skills" data-i18n="navSkills"></a></li>
+      </ul>
+      <p class="lang-switch">
+        <a href="#" data-lang-set="ja">Ja</a><span class="lang-sep">/</span><a href="#" data-lang-set="en">En</a>
+      </p>
+    </div>
+  </nav>
 
   <div class="top-banner" aria-hidden="true"></div>
 
   <div class="page">
-
-    <p class="lang-row">
-      <a href="#" id="lang-toggle"></a>
-    </p>
 
     <header class="intro">
       <div class="intro-text">
@@ -67,11 +80,12 @@
       <ul id="skills-list" class="plain-list"></ul>
     </section>
 
-    <footer class="footer">
-      <p id="footer-text"></p>
-    </footer>
-
   </div>
+
+  <footer class="site-footer">
+    <p id="footer-name" class="footer-name"></p>
+    <p id="footer-text" class="footer-copy"></p>
+  </footer>
 
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
