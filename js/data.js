@@ -20,11 +20,12 @@ const DATA = {
       en: "Ph.D. Student",
     },
     email: "iko733752@gmail.com",
-    // 使わないリンクは行ごと削除してください
+    // ★各リンクのURL ("#" のまま) を自分のページのURLに置き換えてください
     links: [
-      { label: "Google Scholar", url: "#" },   // ★URLを設定してください
-      { label: "GitHub", url: "#" },           // ★URLを設定してください
-      { label: "researchmap", url: "#" },      // ★URLを設定してください
+      { label: "Google Scholar", url: "#" },
+      { label: "Twitter", url: "#" },
+      { label: "LinkedIn", url: "#" },
+      { label: "GitHub", url: "#" },
     ],
     // 顔写真を使う場合は images/profile.jpg などに置いてパスを指定。空文字ならイニシャル表示。
     photo: "",

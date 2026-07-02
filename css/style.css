@@ -5,18 +5,39 @@
 
 body {
   margin: 0;
-  background: #ffffff;
-  color: #202020;
-  font-family: "Lato", Verdana, Helvetica,
-    "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+  /* 真っ白ではなく、目にやさしいごく薄いブルーグレー */
+  background: #f5f7f9;
+  color: #24292f;
+  font-family: "Lato", "Noto Sans JP", Verdana, Helvetica,
+    "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   font-size: 15px;
   line-height: 1.7;
 }
 
+/* ---------- 上部の背景写真 (images/header.jpg を差し替え可能) ---------- */
+.top-banner {
+  height: 240px;
+  background: url(../images/header.jpg) center / cover no-repeat;
+  position: relative;
+}
+/* 写真を薄くしてページ背景に溶け込ませる */
+.top-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(245, 247, 249, 0.3) 0%,
+    rgba(245, 247, 249, 0.55) 55%,
+    #f5f7f9 100%
+  );
+}
+
 .page {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px 25px 60px;
+  max-width: 960px;
+  margin: -130px auto 0;
+  padding: 16px 32px 60px;
+  position: relative;
 }
 
 a {
@@ -87,8 +108,8 @@ h3 {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  background: #e8e8e8;
-  color: #909090;
+  background: #e2e6ea;
+  color: #8a939c;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,6 +189,9 @@ h3 {
 
 /* ---------- レスポンシブ ---------- */
 @media (max-width: 640px) {
+  .top-banner { height: 150px; }
+  .page { margin-top: -80px; padding: 12px 22px 50px; }
+
   .intro {
     flex-direction: column-reverse;
     text-align: left;

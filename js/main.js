@@ -82,11 +82,13 @@
       items.push(a);
     }
     (p.links || []).forEach((link) => {
-      if (!link.url || link.url === "#") return;
+      if (!link.url) return;
       const a = el("a", null, link.label);
       a.href = link.url;
-      a.target = "_blank";
-      a.rel = "noopener";
+      if (link.url !== "#") {
+        a.target = "_blank";
+        a.rel = "noopener";
+      }
       items.push(a);
     });
     items.forEach((a, i) => {

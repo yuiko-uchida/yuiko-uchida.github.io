@@ -4,11 +4,12 @@
 
 ## ファイル構成
 
-```
-index.html      ページの骨組み（通常編集不要）
-css/style.css   デザイン（色を変えたい場合は先頭の :root の変数を編集）
-js/data.js      ★ プロフィール・業績などのデータ。更新はこのファイルだけでOK
-js/main.js      描画・言語切り替えロジック（通常編集不要）
+```text
+index.html          ページの骨組み（通常編集不要）
+css/style.css       デザイン（通常編集不要）
+js/data.js          ★ プロフィール・業績などのデータ。更新はこのファイルだけでOK
+js/main.js          描画・言語切り替えロジック（通常編集不要）
+images/header.jpg   上部の背景写真（差し替え可能）
 ```
 
 ## 業績を追加するには
@@ -32,8 +33,19 @@ js/main.js      描画・言語切り替えロジック（通常編集不要）
 
 ## 顔写真を載せるには
 
-1. `images/` フォルダを作って写真（例: `profile.jpg`）を置く
+1. `images/` フォルダに写真（例: `profile.jpg`）を置く
 2. `js/data.js` の `profile.photo` を `"images/profile.jpg"` にする
+
+## 上部の背景写真を差し替えるには
+
+`images/header.jpg` を好きな写真（横長・幅1600px以上推奨）で上書きするだけです。
+現在の画像は自動生成した空の画像（プレースホルダー）です。
+写真の薄さは `css/style.css` の `.top-banner::after` のグラデーションで調整できます。
+
+## 連絡先リンクを設定するには
+
+`js/data.js` の `profile.links` にある Google Scholar / Twitter / LinkedIn / GitHub の
+`url: "#"` を自分のページのURLに置き換えてください。
 
 ## ローカルで確認するには
 
@@ -50,10 +62,12 @@ python3 -m http.server 8000
    - リポジトリ名を `<ユーザー名>.github.io` にすると `https://<ユーザー名>.github.io/` で公開されます
    - それ以外の名前（例: `portfolio`）なら `https://<ユーザー名>.github.io/portfolio/` になります
 2. このフォルダをプッシュ:
+
    ```bash
    git remote add origin https://github.com/<ユーザー名>/<リポジトリ名>.git
    git push -u origin main
    ```
+
 3. GitHub のリポジトリページ → **Settings → Pages** → Source を「Deploy from a branch」、Branch を `main` / `(root)` にして Save
 4. 数分後に公開されます
 
