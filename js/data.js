@@ -198,14 +198,27 @@ const DATA = {
     },
   ],
 
-  /* ★職歴・インターン等: なければ空配列 [] のままにするとセクションごと非表示になります */
+  /* ★職歴 (インターン・アルバイト): 以下はひな形です。実際の内容に書き換えてください */
   experience: [
-    // 例:
-    // {
-    //   period: { ja: "2025年8月 – 2025年9月", en: "Aug. 2025 – Sep. 2025" },
-    //   title: { ja: "○○株式会社 リサーチインターン", en: "Research Intern, XXX Inc." },
-    //   note: { ja: "△△に関する研究開発", en: "R&D on ..." },
-    // },
+    {
+      period: { ja: "2025年8月 – 2025年9月", en: "Aug. 2025 – Sep. 2025" },   // ★要編集
+      title: {
+        ja: "○○株式会社 リサーチインターン",
+        en: "Research Intern, XXX Inc.",
+      },
+      note: {
+        ja: "コンピュータビジョンに関する研究開発",
+        en: "R&D on computer vision",
+      },
+    },
+    {
+      period: { ja: "2022年4月 – 現在", en: "Apr. 2022 – Present" },          // ★要編集
+      title: {
+        ja: "○○ アルバイト",
+        en: "Part-time job at XXX",
+      },
+      note: "",
+    },
   ],
 
   /* ★スキル: 自由に編集してください */

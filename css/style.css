@@ -151,8 +151,22 @@ h3 {
   font-size: 14px;
 }
 
-.contact-line { font-size: 15px; }
-.contact-sep { color: #b0b0b0; margin: 0 6px; }
+.contact-line {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-icon { display: inline-flex; }
+
+.contact-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: #57606a;
+  transition: fill 0.15s;
+}
+.contact-icon:hover svg,
+.contact-icon:focus svg { fill: #1772d0; }
 
 .intro-photo { flex-shrink: 0; }
 
