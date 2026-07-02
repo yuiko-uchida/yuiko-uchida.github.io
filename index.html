@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuiko Uchida | 内田 結子</title>
+  <meta name="description" content="Yuiko Uchida — Computer Vision Researcher. Research on evaluation metrics for 3D scene generation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#top" class="nav-brand" data-i18n="navBrand"></a>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#about" data-i18n="navAbout"></a></li>
+          <li><a href="#news" data-i18n="navNews"></a></li>
+          <li><a href="#publications" data-i18n="navPublications"></a></li>
+          <li><a href="#awards" data-i18n="navAwards"></a></li>
+          <li><a href="#education" data-i18n="navEducation"></a></li>
+          <li><a href="#skills" data-i18n="navSkills"></a></li>
+        </ul>
+        <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language">
+          <span data-lang-btn="ja">日本語</span><span class="lang-sep">/</span><span data-lang-btn="en">EN</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="container hero-inner">
+        <div id="hero-photo" class="hero-photo" aria-hidden="true"></div>
+        <div class="hero-text">
+          <h1 id="hero-name"></h1>
+          <p id="hero-name-sub" class="hero-name-sub"></p>
+          <p id="hero-affiliation" class="hero-affiliation"></p>
+          <div id="hero-contact" class="hero-contact"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 data-i18n="headAbout"></h2>
+        <p id="about-text" class="about-text"></p>
+        <div id="interests" class="interest-tags"></div>
+      </div>
+    </section>
+
+    <section id="news" class="section section-alt">
+      <div class="container">
+        <h2 data-i18n="headNews"></h2>
+        <ul id="news-list" class="news-list"></ul>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <div class="container">
+        <h2 data-i18n="headPublications"></h2>
+        <h3 data-i18n="headIntl"></h3>
+        <ol id="pub-international" class="pub-list"></ol>
+        <h3 data-i18n="headDomestic"></h3>
+        <ol id="pub-domestic" class="pub-list"></ol>
+      </div>
+    </section>
+
+    <section id="awards" class="section section-alt">
+      <div class="container">
+        <h2 data-i18n="headAwards"></h2>
+        <ul id="awards-list" class="awards-list"></ul>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="container">
+        <h2 data-i18n="headEducation"></h2>
+        <ul id="education-list" class="timeline"></ul>
+      </div>
+    </section>
+
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        <h2 data-i18n="headExperience"></h2>
+        <ul id="experience-list" class="timeline"></ul>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 data-i18n="headSkills"></h2>
+        <div id="skills-list" class="skills-grid"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="footer-text"></p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
