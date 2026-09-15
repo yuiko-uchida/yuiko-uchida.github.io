@@ -12,16 +12,22 @@
     navSkills: { ja: "スキル", en: "Skills" },
     headNews: { ja: "ニュース", en: "News" },
     headPublications: { ja: "研究業績", en: "Publications" },
-    headIntl: { ja: "国際学会", en: "International Conferences" },
-    headDomestic: { ja: "国内学会", en: "Domestic Conferences" },
+    headJournal: { ja: "論文誌", en: "Journal Articles" },
+    headIntl: { ja: "国際会議", en: "International Conferences" },
+    headDomestic: { ja: "国内学会・シンポジウム", en: "Domestic Conferences" },
+    headOther: { ja: "その他", en: "Other Presentations" },
     headAwards: { ja: "受賞", en: "Awards" },
     headCerts: { ja: "資格・免許", en: "Certifications" },
     headExperience: { ja: "職歴・インターンシップ", en: "Experience" },
     headEducation: { ja: "学歴", en: "Education" },
     headSkills: { ja: "スキル", en: "Skills" },
     keywords: { ja: "キーワード: ", en: "Keywords: " },
+    keywordSep: { ja: "，", en: ", " },
     tech: { ja: "使用技術: ", en: "Technologies: " },
   };
+
+  // ニュース欄に表示する期間 (か月)。0以下にすると全件表示になります。
+  const NEWS_MONTHS = 12;
 
   // URLパラメータ (?lang=en) → 保存された言語 → ブラウザ言語 の順で初期言語を決定
   let lang = new URLSearchParams(location.search).get("lang") ||
@@ -89,11 +95,11 @@
     const p = DATA.profile;
     document.getElementById("hero-name").textContent = t(p.name);
     document.getElementById("hero-name-sub").textContent = t(p.nameSub);
-    document.getElementById("hero-affiliation").textContent =
-      t(p.position) + " · " + t(p.affiliation);
+    document.getElementById("hero-affiliation").textContent = t(p.affiliation);
+    document.getElementById("hero-position").textContent = t(p.position);
     document.getElementById("about-text").textContent = t(DATA.about);
 
-    const interests = (DATA.interests || []).map(t).join(", ");
+    const interests = (DATA.interests || []).map(t).join(t(UI_TEXT.keywordSep));
     document.getElementById("interests-line").textContent =
       interests ? t(UI_TEXT.keywords) + interests : "";
 
@@ -120,21 +126,46 @@
     });
   }
 
+  // "2026-09" / "2026" 形式の日付をその月の1日として解釈する
+  function parseNewsDate(value) {
+    const m = /^(\d{4})(?:-(\d{1,2}))?/.exec(String(value || ""));
+    if (!m) return null;
+    return new Date(Number(m[1]), m[2] ? Number(m[2]) - 1 : 0, 1);
+  }
+
+  // data.js のニュースは古いものも残したまま、直近 NEWS_MONTHS か月分だけ表示する
+  function recentNews() {
+    const all = DATA.news || [];
+    if (!(NEWS_MONTHS > 0)) return all;
+    const now = new Date();
+    const cutoff = new Date(now.getFullYear(), now.getMonth() - NEWS_MONTHS + 1, 1);
+    return all.filter((item) => {
+      const date = parseNewsDate(item.date);
+      return date === null || date >= cutoff;   // 日付を読めないものは残す
+    });
+  }
+
   function renderNews() {
     const list = document.getElementById("news-list");
     list.innerHTML = "";
-    (DATA.news || []).forEach((item) => {
+    const items = recentNews();
+    items.forEach((item) => {
       const li = el("li");
       li.appendChild(el("span", "news-date", item.date));
       li.appendChild(el("span", null, t(item.text)));
       list.appendChild(li);
     });
-    toggleSection("news", (DATA.news || []).length > 0);
+    toggleSection("news", items.length > 0);
   }
 
   function renderPubList(listId, pubs) {
     const list = document.getElementById(listId);
     list.innerHTML = "";
+    // 業績が1件もないカテゴリは見出しごと隠す
+    const visible = (pubs || []).length > 0;
+    list.style.display = visible ? "" : "none";
+    const heading = document.getElementById(listId.replace("pub-", "pub-head-"));
+    if (heading) heading.style.display = visible ? "" : "none";
     (pubs || []).forEach((pub) => {
       const li = el("li");
       li.appendChild(el("span", "pub-title", "“" + t(pub.title) + "”"));
@@ -226,13 +257,13 @@
     });
     document.getElementById("footer-name").textContent =
       t(DATA.profile.name) + " · " + t(DATA.profile.nameSub);
-    document.getElementById("footer-text").textContent =
-      "© " + new Date().getFullYear() + " " + t(DATA.profile.name);
 
     renderIntro();
     renderNews();
+    renderPubList("pub-journal", DATA.publications.journal);
     renderPubList("pub-international", DATA.publications.international);
     renderPubList("pub-domestic", DATA.publications.domestic);
+    renderPubList("pub-other", DATA.publications.other);
     renderAwards();
     renderCvList("certifications-list", "certifications", DATA.certifications);
     renderCvList("experience-list", "experience", DATA.experience);

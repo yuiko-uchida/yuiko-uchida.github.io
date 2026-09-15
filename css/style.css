@@ -146,6 +146,11 @@ h3 {
 
 .intro-text p { margin: 0 0 12px; }
 
+/* 所属（1行目）と学年（2行目）は続けて読ませるため間隔を詰める */
+#hero-affiliation { margin-bottom: 2px; }
+
+.position-line { color: #606060; }
+
 .interests-line {
   color: #606060;
   font-size: 14px;
@@ -255,22 +260,32 @@ h3 {
 }
 
 .footer-name {
-  margin: 0 0 4px;
+  margin: 0;
   color: #e8ebee;
   font-size: 15px;
   letter-spacing: 0.04em;
 }
 
-.footer-copy {
-  margin: 0;
-  font-size: 12.5px;
-}
-
 /* ---------- レスポンシブ ---------- */
 @media (max-width: 640px) {
-  .site-nav-inner { padding: 0 18px; gap: 16px; }
+  /* ナビは横スクロールにせず折り返して全項目を見せる */
+  html { scroll-padding-top: 88px; }
+  .site-nav-inner {
+    height: auto;
+    min-height: 44px;
+    padding: 6px 18px;
+    gap: 16px;
+    align-items: center;
+  }
   .nav-name { display: none; }
-  .nav-links { gap: 16px; }
+  .nav-links {
+    flex: 1;
+    flex-wrap: wrap;
+    overflow: visible;
+    gap: 2px 14px;
+    font-size: 13px;
+  }
+  .lang-switch { font-size: 13px; }
 
   .top-banner { height: 150px; }
   .page { margin-top: -80px; padding: 12px 22px 50px; }

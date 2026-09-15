@@ -4,7 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yuiko Uchida | 内田 結子</title>
-  <meta name="description" content="Yuiko Uchida — Computer Vision Researcher. Research on evaluation metrics for 3D scene generation.">
+  <meta name="description" content="内田 結子（北海道大学 大学院情報科学院）の研究ポートフォリオ。3Dシーンの評価指標に関する研究業績・経歴。 | Yuiko Uchida, Hokkaido University. Research on object-level evaluation of reconstructed and generated 3D scenes.">
+
+  <link rel="canonical" href="https://yuiko-uchida.github.io/">
+
+  <!-- SNS共有時のプレビュー (Open Graph / Twitter Card) -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Yuiko Uchida | 内田 結子">
+  <meta property="og:description" content="Research on object-level evaluation of reconstructed and generated 3D scenes. Hokkaido University.">
+  <meta property="og:url" content="https://yuiko-uchida.github.io/">
+  <meta property="og:image" content="https://yuiko-uchida.github.io/images/profile.jpeg">
+  <meta property="og:image:width" content="400">
+  <meta property="og:image:height" content="400">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@yuiko_uchida_">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
@@ -39,6 +58,7 @@
         <h1 id="hero-name" class="name"></h1>
         <p id="hero-name-sub" class="name-sub"></p>
         <p id="hero-affiliation"></p>
+        <p id="hero-position" class="position-line"></p>
         <p id="about-text"></p>
         <p id="interests-line" class="interests-line"></p>
         <p id="hero-contact" class="contact-line"></p>
@@ -55,10 +75,14 @@
 
     <section id="publications">
       <h2 data-i18n="headPublications"></h2>
-      <h3 data-i18n="headIntl"></h3>
+      <h3 id="pub-head-journal" data-i18n="headJournal"></h3>
+      <ol id="pub-journal" class="pub-list"></ol>
+      <h3 id="pub-head-international" data-i18n="headIntl"></h3>
       <ol id="pub-international" class="pub-list"></ol>
-      <h3 data-i18n="headDomestic"></h3>
+      <h3 id="pub-head-domestic" data-i18n="headDomestic"></h3>
       <ol id="pub-domestic" class="pub-list"></ol>
+      <h3 id="pub-head-other" data-i18n="headOther"></h3>
+      <ol id="pub-other" class="pub-list"></ol>
     </section>
 
     <section id="awards">
@@ -90,7 +114,6 @@
 
   <footer class="site-footer">
     <p id="footer-name" class="footer-name"></p>
-    <p id="footer-text" class="footer-copy"></p>
   </footer>
 
   <script src="js/data.js"></script>

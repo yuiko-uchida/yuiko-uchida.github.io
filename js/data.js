@@ -16,93 +16,151 @@ const DATA = {
       en: "Graduate School of Information Science and Technology, Hokkaido University",
     },
     position: {
-      ja: "修士課程",
-      en: "Master's Student",
+      ja: "修士課程2年",
+      en: "Second-year Master's Student",
     },
-    email: "iko733752@gmail.com",
+    email: "uchida@lmd.ist.hokudai.ac.jp",
     links: [
-      { label: "Google Scholar", url: "https://scholar.google.co.jp/citations?user=pyVn20EAAAAJ" },
+      {
+        label: "Google Scholar",
+        url: "https://scholar.google.co.jp/citations?user=pyVn20EAAAAJ",
+      },
       { label: "Twitter", url: "https://x.com/yuiko_uchida_" },
-      { label: "LinkedIn", url: "https://www.linkedin.com/in/yuiko-uchida-1098b4375" },
-      { label: "OpenReview", url: "https://openreview.net/profile?id=~Yuiko_Uchida1" },
+      {
+        label: "LinkedIn",
+        url: "https://www.linkedin.com/in/yuiko-uchida-1098b4375",
+      },
+      // {
+      //   label: "OpenReview",
+      //   url: "https://openreview.net/profile?id=~Yuiko_Uchida1",
+      // },
     ],
     // 顔写真を使う場合は images/profile.jpg などに置いてパスを指定。空文字ならイニシャル表示。
-    photo: "",
+    photo: "images/profile.jpeg",
   },
 
   about: {
-    ja: "3Dシーン生成の評価に関する研究を行っています。物体検出モデルの知見を活用し、生成された3Dシーンのオブジェクトレベルの忠実性を捉える評価指標の構築に取り組んでいます。",
-    en: "My research focuses on the evaluation of 3D scene generation. I develop evaluation metrics that capture object-level fidelity of generated 3D scenes by leveraging insights from object detection models.",
+    ja: "3Dシーンの評価に関する研究を行っています。再構成・生成された3Dシーンの品質をオブジェクト単位で捉える評価指標の構築や、ロボット操作などの下流タスクの観点からの評価に取り組んでいます。",
+    en: "My research focuses on the evaluation of 3D scenes. I develop object-level quality metrics for reconstructed and generated 3D scenes, and study how scene quality affects downstream tasks such as robotic manipulation.",
   },
 
   interests: [
-    { ja: "3Dシーン生成・評価", en: "3D Scene Generation & Evaluation" },
     { ja: "コンピュータビジョン", en: "Computer Vision" },
-    { ja: "物体検出", en: "Object Detection" },
     { ja: "評価指標", en: "Evaluation Metrics" },
+    { ja: "3Dシーン再構成・生成", en: "3D Scene Reconstruction & Generation" },
+    { ja: "ロボットビジョン", en: "Robot Vision" },
   ],
 
   news: [
     {
+      date: "2026-09",
+      text: {
+        ja: "Visual Computing 2026 にてポスター発表を行いました。",
+        en: "Presented at Visual Computing 2026.",
+      },
+    },
+    {
+      date: "2026-08",
+      text: {
+        ja: "IEEE Access に主著論文「Rethinking 3-D Scene Evaluation from an Object-Centric Perspective」が採択されました。",
+        en: "My first-authored paper \u201cRethinking 3-D Scene Evaluation from an Object-Centric Perspective\u201d has been accepted to IEEE Access.",
+      },
+    },
+    {
+      date: "2026-08",
+      text: {
+        ja: "画像の認識・理解シンポジウム (MIRU) 2026 にてポスター発表を行いました。",
+        en: "Presented at the Meeting on Image Recognition and Understanding (MIRU) 2026.",
+      },
+    },
+    {
       date: "2026-02",
       text: {
-        ja: "情報メディア学会技術報告での発表が確定しました。",
-        en: "A presentation at the ITE Technical Report meeting has been accepted.",
+        ja: "映像情報メディア学会技術報告にて口頭発表を行いました。",
+        en: "Presented at the ITE Technical Report meeting.",
       },
     },
     {
       date: "2025-10",
       text: {
-        ja: "ICCV 2025 UniLight Workshop にて発表しました。",
-        en: "Presented at the ICCV 2025 UniLight Workshop.",
+        ja: "ICCV 2025 UniLight Workshop にて口頭・ポスター発表を行いました。",
+        en: "Gave an oral and poster presentation at an ICCV 2025 UniLight Workshop.",
+      },
+    },
+    {
+      date: "2025-02",
+      text: {
+        ja: "The 2024 IEEE Sapporo Section Student Paper Contest Encouraging Prize を受賞しました。",
+        en: "Received The 2024 IEEE Sapporo Section Student Paper Contest Encouraging Prize.",
       },
     },
     {
       date: "2024-12",
       text: {
-        ja: "SIGGRAPH Asia 2024 Technical Communications にて発表しました。",
-        en: "Presented at SIGGRAPH Asia 2024 Technical Communications.",
-      },
-    },
-    {
-      date: "2024-10",
-      text: {
-        ja: "2024 IEEE Sapporo Section Student Paper Contest Encouraging Prize を受賞しました。",
-        en: "Received the 2024 IEEE Sapporo Section Student Paper Contest Encouraging Prize.",
+        ja: "SIGGRAPH Asia 2024 Technical Communications にて口頭発表を行いました。",
+        en: "Gave an oral presentation at SIGGRAPH Asia 2024 Technical Communications.",
       },
     },
   ],
 
   publications: {
-    /* --- 国際学会 --- */
+    /* --- 論文誌 --- */
+    journal: [
+      {
+        authors:
+          "Yuiko Uchida, Ren Togo, Keisuke Maeda, Takahiro Ogawa, and Miki Haseyama",
+        title:
+          "Rethinking 3-D Scene Evaluation from an Object-Centric Perspective",
+        venue: {
+          ja: "IEEE Access（Early Access）",
+          en: "IEEE Access (Early Access)",
+        },
+        year: 2026,
+        links: [{ label: "DOI", url: "https://doi.org/10.1109/ACCESS.2026.3727601" }],
+      },
+    ],
+
+    /* --- 国際会議 --- */
     international: [
       {
-        authors: "Yuiko Uchida, Ren Togo, Keisuke Maeda, Takahiro Ogawa, and Miki Haseyama",
-        title: "Objectness Similarity: Capturing Object-Level Fidelity in 3D Scene Evaluation",
+        authors:
+          "Yuiko Uchida, Ren Togo, Keisuke Maeda, Takahiro Ogawa, and Miki Haseyama",
+        title:
+          "Objectness Similarity: Capturing Object-Level Fidelity in 3D Scene Evaluation",
         venue: {
-          ja: "arXiv: 2509.09143（ICCV 2025 UniLight Workshop 採択）",
-          en: "arXiv: 2509.09143 (accepted at ICCV 2025 UniLight Workshop)",
+          ja: "IEEE/CVF International Conference on Computer Vision (ICCV) Workshops（口頭・ポスター発表）",
+          en: "IEEE/CVF International Conference on Computer Vision (ICCV) Workshops (Oral and Poster)",
         },
         year: 2025,
         links: [{ label: "arXiv", url: "https://arxiv.org/abs/2509.09143" }],
       },
       {
-        authors: "Yuiko Uchida, Ren Togo, Keisuke Maeda, Takahiro Ogawa, and Miki Haseyama",
-        title: "An evaluation metric for single image-to-3D models based on object detection perspective",
-        venue: "Proceedings of the SIGGRAPH Asia 2024 Technical Communications, pages 1–4",
+        authors:
+          "Yuiko Uchida, Ren Togo, Keisuke Maeda, Takahiro Ogawa, and Miki Haseyama",
+        title:
+          "An Evaluation Metric for Single Image-to-3D Models Based on Object Detection Perspective",
+        venue: {
+          ja: "SIGGRAPH Asia 2024 Technical Communications（口頭発表）",
+          en: "SIGGRAPH Asia 2024 Technical Communications (Oral)",
+        },
         year: 2024,
-        links: [],   // 例: [{ label: "DOI", url: "https://doi.org/..." }]
+        links: [{ label: "DOI", url: "https://doi.org/10.1145/3681758.3697992" }],
       },
       {
-        authors: "Yuiko Uchida, Ren Togo, Keisuke Maeda, Takahiro Ogawa, and Miki Haseyama",
-        title: "An evaluation metric for single image-to-3D models based on a class confidence score of object detection models",
-        venue: "Proceedings of the 2024 IEEE 13th Global Conference on Consumer Electronics (GCCE), pages 1163–1164",
+        authors:
+          "Yuiko Uchida, Ren Togo, Keisuke Maeda, Takahiro Ogawa, and Miki Haseyama",
+        title:
+          "An Evaluation Metric for Single Image-to-3D Models Based on a Class Confidence Score of Object Detection Models",
+        venue: {
+          ja: "Proc. 2024 IEEE 13th Global Conference on Consumer Electronics (GCCE), pp. 1163–1164（ポスター発表）",
+          en: "Proc. 2024 IEEE 13th Global Conference on Consumer Electronics (GCCE), pp. 1163–1164 (Poster)",
+        },
         year: 2024,
-        links: [],
+        links: [{ label: "DOI", url: "https://doi.org/10.1109/GCCE62371.2024.10761036" }],
       },
     ],
 
-    /* --- 国内学会 --- */
+    /* --- 国内学会・シンポジウム --- */
     domestic: [
       {
         authors: {
@@ -110,22 +168,56 @@ const DATA = {
           en: "Yuiko Uchida, Ren Togo, Keisuke Maeda, Takahiro Ogawa, and Miki Haseyama",
         },
         title: {
-          ja: "Open-Vocabulary 物体検出モデルを導入したオブジェクト中心の3Dシーン評価指標に関する検討",
-          en: "Open-Vocabulary 物体検出モデルを導入したオブジェクト中心の3Dシーン評価指標に関する検討 (in Japanese)",
+          ja: "ロボット把持姿勢推定に対する3D再構成シーン評価指標の有効性の検証",
+          en: "Validating 3D Scene Reconstruction Metrics for Robotic Grasp Pose Estimation (in Japanese)",
         },
         venue: {
-          ja: "情報メディア学会技術報告, pages xx–xx（発表確定）",
-          en: "ITE Technical Report, pages xx–xx (to be presented)",
+          ja: "Visual Computing (VC)",
+          en: "Visual Computing (VC)",
         },
         year: 2026,
         links: [],
       },
       {
-        authors: "Yuiko Uchida, Ren Togo, Keisuke Maeda, Takahiro Ogawa, Miki Haseyama",
-        title: "An Object-Focused Metric for 3D Scene Evaluation Based on Features of an Object Detection Model",
+        authors: {
+          ja: "内田 結子, 藤後 廉, 前田 圭介, 小川 貴弘, 長谷山 美紀",
+          en: "Yuiko Uchida, Ren Togo, Keisuke Maeda, Takahiro Ogawa, and Miki Haseyama",
+        },
+        title: {
+          ja: "3D再構成シーンの品質劣化がロボットの把持姿勢推定に与える影響—人間中心の評価指標と把持姿勢誤差の相関分析—",
+          en: "Impact of Quality Degradation in Reconstructed 3D Scenes on Robotic Grasp Pose Estimation: A Correlation Analysis between Human-Centric Metrics and Grasp Pose Errors (in Japanese)",
+        },
         venue: {
-          ja: "画像の認識・理解シンポジウム (MIRU2025), pages 1–6",
-          en: "Meeting on Image Recognition and Understanding (MIRU2025), pages 1–6",
+          ja: "画像の認識・理解シンポジウム (MIRU)",
+          en: "Meeting on Image Recognition and Understanding (MIRU)",
+        },
+        year: 2026,
+        links: [],
+      },
+      {
+        authors: {
+          ja: "内田 結子, 藤後 廉, 前田 圭介, 小川 貴弘, 長谷山 美紀",
+          en: "Yuiko Uchida, Ren Togo, Keisuke Maeda, Takahiro Ogawa, and Miki Haseyama",
+        },
+        title: {
+          ja: "Open-Vocabulary物体検出モデルを導入したオブジェクト中心の3Dシーン評価指標に関する検討",
+          en: "A Note on an Object-Centric Metric for 3D Scenes Based on Open-Vocabulary Object Detection Models (in Japanese)",
+        },
+        venue: {
+          ja: "映像情報メディア学会技術報告, vol. 50, no. 5, pp. 384–388",
+          en: "ITE Technical Report, vol. 50, no. 5, pp. 384–388",
+        },
+        year: 2026,
+        links: [],
+      },
+      {
+        authors:
+          "Yuiko Uchida, Ren Togo, Keisuke Maeda, Takahiro Ogawa, and Miki Haseyama",
+        title:
+          "An Object-Focused Metric for 3D Scene Evaluation Based on Features of an Object Detection Model",
+        venue: {
+          ja: "画像の認識・理解シンポジウム (MIRU)",
+          en: "Meeting on Image Recognition and Understanding (MIRU)",
         },
         year: 2025,
         links: [],
@@ -137,13 +229,33 @@ const DATA = {
         },
         title: {
           ja: "物体検出モデルの信頼度スコアに基づくSingle Image-to-3Dモデルの評価指標に関する検討",
-          en: "物体検出モデルの信頼度スコアに基づくSingle Image-to-3Dモデルの評価指標に関する検討 (in Japanese)",
+          en: "A Note on an Evaluation Metric for Single Image-to-3D Models Based on Confidence Scores of Object Detection Models (in Japanese)",
         },
         venue: {
-          ja: "令和6年度 電気・情報関係学会北海道支部連合大会, pages 91–92",
-          en: "2024 Hokkaido Chapters Joint Convention of the Institutes of Electrical and Information Engineers, pages 91–92",
+          ja: "令和6年度 電気・情報関係学会北海道支部連合大会, pp. 91–92",
+          en: "2024 Hokkaido Chapters Joint Convention of the Institutes of Electrical and Information Engineers, pp. 91–92",
         },
         year: 2024,
+        links: [],
+      },
+    ],
+
+    /* --- その他（研究会など） --- */
+    other: [
+      {
+        authors: {
+          ja: "内田 結子, 藤後 廉, 前田 圭介, 小川 貴弘, 長谷山 美紀",
+          en: "Yuiko Uchida, Ren Togo, Keisuke Maeda, Takahiro Ogawa, and Miki Haseyama",
+        },
+        title: {
+          ja: "動的シーン再構成におけるオブジェクト単位の品質評価と低品質オブジェクトの選択的修復に関する検討",
+          en: "A Note on Object-Level Quality Assessment and Selective Refinement of Low-Quality Objects in 4D Scene Reconstruction (in Japanese)",
+        },
+        venue: {
+          ja: "スマートインフォメディアシステム研究会 (SIS研究会)（発表予定）",
+          en: "IEICE Technical Committee on Smart Info-Media Systems (SIS) (to be presented)",
+        },
+        year: 2026,
         links: [],
       },
     ],
@@ -151,11 +263,12 @@ const DATA = {
 
   awards: [
     {
-      year: 2024,
-      title: "The 2024 IEEE Sapporo Section Student Paper Contest Encouraging Prize",
+      year: 2025,
+      title:
+        "The 2024 IEEE Sapporo Section Student Paper Contest Encouraging Prize",
       note: {
-        ja: "令和6年度 電気・情報関係学会北海道支部連合大会における講演発表に関して授与",
-        en: "For the presentation at the 2024 Hokkaido Chapters Joint Convention of the Institutes of Electrical and Information Engineers",
+        ja: "令和6年度 電気・情報関係学会北海道支部連合大会における講演発表に関して授与（2025年2月）",
+        en: "Awarded in February 2025 for the presentation at the 2024 Hokkaido Chapters Joint Convention of the Institutes of Electrical and Information Engineers",
       },
     },
   ],
@@ -206,7 +319,10 @@ const DATA = {
       },
     },
     {
-      period: { ja: "2025年8月 – 9月（2週間）", en: "Aug. – Sep. 2025 (2 weeks)" },
+      period: {
+        ja: "2025年8月 – 9月（2週間）",
+        en: "Aug. – Sep. 2025 (2 weeks)",
+      },
       title: {
         ja: "株式会社日立製作所 夏季インターン",
         en: "Summer Intern, Hitachi, Ltd.",
@@ -218,7 +334,7 @@ const DATA = {
       tech: "Python, PyTorch, AutoGen, OpenAI API, CLIP, DINOv2",
     },
     {
-      period: { ja: "2025年9月", en: "Sep. 2025" },
+      period: { ja: "2025年9月（1週間）", en: "Sep. 2025 (1 week)" },
       title: {
         ja: "株式会社本田技術研究所 夏季インターン",
         en: "Summer Intern, Honda R&D Co., Ltd.",
@@ -263,21 +379,34 @@ const DATA = {
   ],
 
   /* --- スキル (インターン等で使用した技術から作成。自由に編集してください) --- */
-  skills: [
-    {
-      category: { ja: "プログラミング", en: "Programming" },
-      items: ["Python", "PyTorch", "SQL (PostgreSQL / MySQL)", "HTML / CSS / JavaScript"],
-    },
-    {
-      category: { ja: "ツール・フレームワーク", en: "Tools & Frameworks" },
-      items: ["Docker / Docker Compose", "Git / GitHub", "LangChain", "OpenAI API", "ONNX", "Blender Python API (bpy)", "NVIDIA Jetson"],
-    },
-    {
-      category: { ja: "言語", en: "Languages" },
-      items: [
-        { ja: "日本語（ネイティブ）", en: "Japanese (native)" },
-        { ja: "英語", en: "English" },
-      ],
-    },
-  ],
+  // skills: [
+  //   {
+  //     category: { ja: "プログラミング", en: "Programming" },
+  //     items: [
+  //       "Python",
+  //       "PyTorch",
+  //       "SQL (PostgreSQL / MySQL)",
+  //       "HTML / CSS / JavaScript",
+  //     ],
+  //   },
+  //   {
+  //     category: { ja: "ツール・フレームワーク", en: "Tools & Frameworks" },
+  //     items: [
+  //       "Docker / Docker Compose",
+  //       "Git / GitHub",
+  //       "LangChain",
+  //       "OpenAI API",
+  //       "ONNX",
+  //       "Blender Python API (bpy)",
+  //       "NVIDIA Jetson",
+  //     ],
+  //   },
+  //   {
+  //     category: { ja: "言語", en: "Languages" },
+  //     items: [
+  //       { ja: "日本語（ネイティブ）", en: "Japanese (native)" },
+  //       { ja: "英語", en: "English" },
+  //     ],
+  //   },
+  // ],
 };

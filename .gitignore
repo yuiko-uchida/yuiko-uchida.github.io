@@ -1,0 +1,7 @@
+# 業績リストPDFなど、公開リポジトリに含めない作業ファイル
+gyoseki.pdf
+*.pdf
+
+# OS / エディタ
+.DS_Store
+Thumbs.db
