@@ -116,7 +116,9 @@ const DATA = {
           en: "IEEE Access (Early Access)",
         },
         year: 2026,
-        links: [{ label: "DOI", url: "https://doi.org/10.1109/ACCESS.2026.3727601" }],
+        links: [
+          { label: "DOI", url: "https://doi.org/10.1109/ACCESS.2026.3727601" },
+        ],
       },
     ],
 
@@ -144,7 +146,9 @@ const DATA = {
           en: "SIGGRAPH Asia 2024 Technical Communications (Oral)",
         },
         year: 2024,
-        links: [{ label: "DOI", url: "https://doi.org/10.1145/3681758.3697992" }],
+        links: [
+          { label: "DOI", url: "https://doi.org/10.1145/3681758.3697992" },
+        ],
       },
       {
         authors:
@@ -156,7 +160,12 @@ const DATA = {
           en: "Proc. 2024 IEEE 13th Global Conference on Consumer Electronics (GCCE), pp. 1163–1164 (Poster)",
         },
         year: 2024,
-        links: [{ label: "DOI", url: "https://doi.org/10.1109/GCCE62371.2024.10761036" }],
+        links: [
+          {
+            label: "DOI",
+            url: "https://doi.org/10.1109/GCCE62371.2024.10761036",
+          },
+        ],
       },
     ],
 
@@ -307,7 +316,7 @@ const DATA = {
       period: { ja: "2024年9月 – 現在", en: "Sep. 2024 – Present" },
       title: {
         ja: "株式会社DexAI 機械学習エンジニア（長期インターン）",
-        en: "Machine Learning Engineer (Long-term Intern), DexAI Inc.",
+        en: "Machine Learning Engineer (Long-term Intern), DexAI Co., Ltd.",
       },
       note: {
         ja: "深層モデルを用いた社内ライブラリの実装、深層学習論文のサーベイと性能評価、大規模言語モデルを用いた検索拡張生成 (RAG) アプリケーションの性能調査・性能向上、教材制作等の幅広い業務を担当",
@@ -329,7 +338,7 @@ const DATA = {
       },
       note: {
         ja: "生成AIを用いた現場労働者のサポートシステムに関する研究（中央研究所 研究開発グループ 知能ビジョン研究部）",
-        en: "Research on generative-AI-based support systems for field workers (Intelligent Vision Research Department, R&D Group, Central Research Laboratory)",
+        en: "Research on generative-AI-based support systems for field workers",
       },
       tech: "Python, PyTorch, AutoGen, OpenAI API, CLIP, DINOv2",
     },
@@ -341,7 +350,7 @@ const DATA = {
       },
       note: {
         ja: "強化学習による自動運転システムの研究開発（先進技術研究所 知能化・安全研究ドメイン）",
-        en: "R&D on autonomous driving systems using reinforcement learning (Innovative Research Excellence, Intelligence & Safety Research Domain)",
+        en: "R&D on autonomous driving systems using reinforcement learning",
       },
       tech: {
         ja: "Python, 強化学習 (A3C)",
