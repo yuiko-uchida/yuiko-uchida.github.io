@@ -110,10 +110,10 @@ const DATA = {
         authors:
           "Yuiko Uchida, Ren Togo, Keisuke Maeda, Takahiro Ogawa, and Miki Haseyama",
         title:
-          "Rethinking 3-D Scene Evaluation from an Object-Centric Perspective",
+          "Rethinking 3-D Scene Evaluation From an Object-Centric Perspective",
         venue: {
-          ja: "IEEE Access（Early Access）",
-          en: "IEEE Access (Early Access)",
+          ja: "IEEE Access, vol. 14, pp. 139965–139978",
+          en: "IEEE Access, vol. 14, pp. 139965–139978",
         },
         year: 2026,
         links: [
