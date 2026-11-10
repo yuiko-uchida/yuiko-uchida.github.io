@@ -27,7 +27,7 @@
   };
 
   // ニュース欄に表示する件数。0以下にすると全件表示になります。
-  const NEWS_COUNT = 5;
+  const NEWS_COUNT = 6;
 
   // URLパラメータ (?lang=en) → 保存された言語 → ブラウザ言語 の順で初期言語を決定
   let lang = new URLSearchParams(location.search).get("lang") ||
