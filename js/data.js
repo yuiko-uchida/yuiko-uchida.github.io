@@ -67,6 +67,13 @@ const DATA = {
       },
     },
     {
+      date: "2026-10",
+      text: {
+        ja: "2026年度 北楡会・北海道大学情報系交流会 (母校交流会) にてポスター発表を行い、第2位を受賞しました。",
+        en: "Won 2nd place in the poster session at the 2026 Hokuyukai Alumni Networking Event (Hokkaido University, Information Science).",
+      },
+    },
+    {
       date: "2026-09",
       text: {
         ja: "Visual Computing 2026 にてポスター発表を行いました。",
@@ -78,6 +85,13 @@ const DATA = {
       text: {
         ja: "IEEE Access に主著論文「Rethinking 3-D Scene Evaluation from an Object-Centric Perspective」が採択されました。",
         en: "My first-authored paper \u201cRethinking 3-D Scene Evaluation from an Object-Centric Perspective\u201d has been accepted to IEEE Access.",
+      },
+    },
+    {
+      date: "2026-08",
+      text: {
+        ja: "北海道大学 EXEX博士人材フェローシップ (JST SPRING) に採択されました。",
+        en: "Selected for the Hokkaido University EXEX Doctoral Fellowship (JST SPRING).",
       },
     },
     {
