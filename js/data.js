@@ -53,6 +53,20 @@ const DATA = {
 
   news: [
     {
+      date: "2026-11",
+      text: {
+        ja: "Machine Learning Summer School (MLSS) 2027 Okinawa に採択されました。",
+        en: "Accepted to the Machine Learning Summer School (MLSS) 2027 Okinawa.",
+      },
+    },
+    {
+      date: "2026-10",
+      text: {
+        ja: "IEICE スマートインフォメディアシステム研究会 (SIS研究会) 2026 にて口頭発表を行いました。",
+        en: "Gave an oral presentation at the IEICE Technical Committee on Smart Info-Media Systems (SIS) 2026.",
+      },
+    },
+    {
       date: "2026-09",
       text: {
         ja: "Visual Computing 2026 にてポスター発表を行いました。",
@@ -177,6 +191,22 @@ const DATA = {
           en: "Yuiko Uchida, Ren Togo, Keisuke Maeda, Takahiro Ogawa, and Miki Haseyama",
         },
         title: {
+          ja: "動的シーン再構成におけるオブジェクト単位の品質評価と低品質オブジェクトの選択的修復に関する検討",
+          en: "A Note on Object-Level Quality Assessment and Selective Refinement of Low-Quality Objects in 4D Scene Reconstruction (in Japanese)",
+        },
+        venue: {
+          ja: "電子情報通信学会技術研究報告, vol. 126, no. 184, pp. 12–16",
+          en: "IEICE Technical Report, vol. 126, no. 184, pp. 12–16",
+        },
+        year: 2026,
+        links: [],
+      },
+      {
+        authors: {
+          ja: "内田 結子, 藤後 廉, 前田 圭介, 小川 貴弘, 長谷山 美紀",
+          en: "Yuiko Uchida, Ren Togo, Keisuke Maeda, Takahiro Ogawa, and Miki Haseyama",
+        },
+        title: {
           ja: "ロボット把持姿勢推定に対する3D再構成シーン評価指標の有効性の検証",
           en: "Validating 3D Scene Reconstruction Metrics for Robotic Grasp Pose Estimation (in Japanese)",
         },
@@ -250,24 +280,7 @@ const DATA = {
     ],
 
     /* --- その他（研究会など） --- */
-    other: [
-      {
-        authors: {
-          ja: "内田 結子, 藤後 廉, 前田 圭介, 小川 貴弘, 長谷山 美紀",
-          en: "Yuiko Uchida, Ren Togo, Keisuke Maeda, Takahiro Ogawa, and Miki Haseyama",
-        },
-        title: {
-          ja: "動的シーン再構成におけるオブジェクト単位の品質評価と低品質オブジェクトの選択的修復に関する検討",
-          en: "A Note on Object-Level Quality Assessment and Selective Refinement of Low-Quality Objects in 4D Scene Reconstruction (in Japanese)",
-        },
-        venue: {
-          ja: "スマートインフォメディアシステム研究会 (SIS研究会)（発表予定）",
-          en: "IEICE Technical Committee on Smart Info-Media Systems (SIS) (to be presented)",
-        },
-        year: 2026,
-        links: [],
-      },
-    ],
+    other: [],
   },
 
   awards: [
@@ -304,7 +317,7 @@ const DATA = {
       period: { ja: "2022年12月", en: "Dec. 2022" },
       title: {
         ja: "第一種普通自動車免許",
-        en: "Driver's License (Class 1)",
+        en: "Driver's License",
       },
       note: "",
     },
