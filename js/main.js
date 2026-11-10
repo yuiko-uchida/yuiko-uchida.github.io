@@ -26,8 +26,8 @@
     tech: { ja: "使用技術: ", en: "Technologies: " },
   };
 
-  // ニュース欄に表示する期間 (か月)。0以下にすると全件表示になります。
-  const NEWS_MONTHS = 12;
+  // ニュース欄に表示する件数。0以下にすると全件表示になります。
+  const NEWS_COUNT = 5;
 
   // URLパラメータ (?lang=en) → 保存された言語 → ブラウザ言語 の順で初期言語を決定
   let lang = new URLSearchParams(location.search).get("lang") ||
@@ -133,16 +133,17 @@
     return new Date(Number(m[1]), m[2] ? Number(m[2]) - 1 : 0, 1);
   }
 
-  // data.js のニュースは古いものも残したまま、直近 NEWS_MONTHS か月分だけ表示する
+  // data.js のニュースは古いものも残したまま、新しい順に NEWS_COUNT 件だけ表示する
   function recentNews() {
-    const all = DATA.news || [];
-    if (!(NEWS_MONTHS > 0)) return all;
-    const now = new Date();
-    const cutoff = new Date(now.getFullYear(), now.getMonth() - NEWS_MONTHS + 1, 1);
-    return all.filter((item) => {
-      const date = parseNewsDate(item.date);
-      return date === null || date >= cutoff;   // 日付を読めないものは残す
+    const all = (DATA.news || []).slice();
+    // 日付の新しい順に並べる (日付を読めないもの・同じ月のものは data.js の順を保つ)
+    all.sort((a, b) => {
+      const da = parseNewsDate(a.date);
+      const db = parseNewsDate(b.date);
+      if (!da || !db) return 0;
+      return db - da;
     });
+    return NEWS_COUNT > 0 ? all.slice(0, NEWS_COUNT) : all;
   }
 
   function renderNews() {
